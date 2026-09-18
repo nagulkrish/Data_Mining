@@ -1,0 +1,2 @@
+baseline_runtime_sec,mitigated_runtime_sec,baseline_recall,mitigated_recall,baseline_precision,mitigated_precision,original_tokens,mitigated_tokens,token_reduction_percent,candidate_pairs_after,same_retrieved_after,same_total,different_retrieved_after,different_total
+133.811,322.6320054000025,0.8602,0.996415770609319,0.7059,0.31662870159453305,3263852,2247783,31.130976527121945,68335923,278,279,600,621

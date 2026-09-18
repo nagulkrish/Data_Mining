@@ -1,0 +1,5 @@
+bands,rows,candidates,candidate_pct,pair_reduction_pct,same_retrieved,same_total,recall_pct,different_retrieved,precision_pct,runtime_seconds
+32,8,5977376,8.302603,91.6974,151,279,54.12,120,55.72,3.094
+64,4,9594865,13.327312,86.6727,217,279,77.78,150,59.13,6.036
+128,2,7381888,10.253477,89.7465,240,279,86.02,100,70.59,5.491
+256,1,3983904,5.533661,94.4663,235,279,84.23,63,78.86,4.429

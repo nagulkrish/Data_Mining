@@ -1,0 +1,18 @@
+HashAggregate  (cost=11566.77..11568.77 rows=200 width=32) (actual time=258.389..258.884 rows=11999 loops=1)
+  Group Key: n.notice_id
+  Batches: 1  Memory Usage: 929kB
+  Buffers: shared hit=415359 read=21
+  ->  Nested Loop  (cost=4.55..11559.13 rows=3057 width=32) (actual time=0.164..217.043 rows=427314 loops=1)
+        Buffers: shared hit=415359 read=21
+        ->  Values Scan on "*VALUES*"  (cost=0.00..1.60 rows=128 width=36) (actual time=0.001..0.102 rows=128 loops=1)
+        ->  Bitmap Heap Scan on notice_lsh_bands n  (cost=4.55..90.05 rows=24 width=68) (actual time=0.379..1.549 rows=3338 loops=128)
+              Recheck Cond: ((band_no = "*VALUES*".column1) AND (band_key = "*VALUES*".column2))
+              Filter: (notice_id <> 'N000001'::text)
+              Rows Removed by Filter: 1
+              Heap Blocks: exact=414713
+              Buffers: shared hit=415359 read=21
+              ->  Bitmap Index Scan on idx_notice_lsh_band  (cost=0.00..4.54 rows=24 width=0) (actual time=0.139..0.139 rows=3339 loops=128)
+                    Index Cond: ((band_no = "*VALUES*".column1) AND (band_key = "*VALUES*".column2))
+                    Buffers: shared hit=646 read=21
+Planning Time: 0.106 ms
+Execution Time: 259.236 ms

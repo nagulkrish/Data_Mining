@@ -1,0 +1,16 @@
+HashAggregate  (cost=11479.48..11481.48 rows=200 width=32) (actual time=202.343..202.817 rows=11999 loops=1)
+  Group Key: n.notice_id
+  Batches: 1  Memory Usage: 929kB
+  Buffers: shared hit=409441 read=5939 written=5264
+  ->  Nested Loop  (cost=0.42..11471.84 rows=3057 width=32) (actual time=0.021..161.287 rows=427314 loops=1)
+        Buffers: shared hit=409441 read=5939 written=5264
+        ->  Values Scan on "*VALUES*"  (cost=0.00..1.60 rows=128 width=36) (actual time=0.001..0.096 rows=128 loops=1)
+        ->  Index Scan using idx_notice_lsh_band on notice_lsh_bands n  (cost=0.42..89.37 rows=24 width=68) (actual time=0.007..1.109 rows=3338 loops=128)
+              Index Cond: ((band_no = "*VALUES*".column1) AND (band_key = "*VALUES*".column2))
+              Filter: (notice_id <> 'N000001'::text)
+              Rows Removed by Filter: 1
+              Buffers: shared hit=409441 read=5939 written=5264
+Planning:
+  Buffers: shared hit=89 read=8 written=8
+Planning Time: 0.495 ms
+Execution Time: 203.337 ms

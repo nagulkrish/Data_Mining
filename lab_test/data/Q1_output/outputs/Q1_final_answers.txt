@@ -1,0 +1,29 @@
+Q1 COMPLETE FILED RECORD
+
+All important SQL used for Q1(a)-Q1(f) is stored in:
+code/Q1_all_SQL.sql
+
+The file contains:
+- Master-data checks
+- sales_raw table definition
+- Object-store partition verification commands
+- Idempotency checks and checksum
+- Star-schema dimension/fact creation
+- Dashboard aggregation
+- Historical price revision queries
+- DuckDB federation setup and query
+- EXPLAIN evidence
+- Finance reconciliation
+- Line-type analysis
+- Printed vs historical price diagnostic
+- S07 July missing-date check
+
+Q1 results:
+(a) 4,457 sales files; S01 Jan 2024 = 31 files / 580,704 bytes.
+(b) Final sales_raw = 1,120,924 rows; checksum = 77c760db667185700452d0915b73e69b.
+(c) dim_store=12, dim_product=1,224, dim_category=14, fact_sales=757,205.
+(d) March historical-price revenue = 42,209,951.56; April = 38,154,091.52.
+(e) Federated S01 Jan query result = Karnataka | 4532434.520000006.
+(f) Finance-definition source revenue and documented S07 July 9-11 gap were verified.
+
+Note: actual screenshots are to be added under screenshots/.
