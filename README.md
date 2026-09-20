@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/32434120/README.md)
+[README.md](https://github.com/user-attachments/files/32434241/README.md)
 # Data Mining Lab
 
 This repository contains the Data Mining laboratory work, including data loading, processing, similarity analysis, retrieval, database indexing, and performance evaluation.
@@ -114,7 +114,7 @@ The 128 × 2 configuration was used for the subsequent retrieval workflow.
 
 Graph:
 
-![Q2(c) LSH Retrieval](Q2_c_required_graph.png)
+![Q2(c) LSH Retrieval](lab_test/data_2/Q2_OUTPUTS/Q2_c_required_graph.png)
 
 Results:
 
